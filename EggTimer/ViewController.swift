@@ -7,7 +7,7 @@ class ViewController: UIViewController {
     let mediumTime = 7
     let hardTime = 12
     
-    // Creamos un diccionario para las variables de tiempo que tenemos arriba.
+    // Creamos un diccionario para las variables de tiempo que tenemos arriba, con datos de distinto tipo.
     let eggTimes: [String: Int] = ["Soft": 5, "Medium": 7, "Hard": 12]
     
     /* Para conectar múltiples botones a un mismo IBAction, dejamos presionada la tecla control normal, y la movemos al bloque de código de la IBAction, o simplemente arrastramos desde el círculo de la IBAction al botón que queremos agregar, sin presionar ninguna tecla. */
