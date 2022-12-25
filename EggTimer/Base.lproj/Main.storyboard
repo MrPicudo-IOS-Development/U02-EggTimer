@@ -52,6 +52,7 @@
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="angelaSolution:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rbh-Qm-8sl"/>
                                                             <action selector="hardnessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmK-9F-v6L"/>
                                                             <action selector="hardnessSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghh-ka-eDF"/>
                                                         </connections>
@@ -81,6 +82,7 @@
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="angelaSolution:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7u6-4s-gU2"/>
                                                             <action selector="hardnessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkf-JY-raY"/>
                                                             <action selector="hardnessSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRO-vR-l3W"/>
                                                         </connections>
@@ -110,6 +112,7 @@
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="angelaSolution:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUW-R6-8jR"/>
                                                             <action selector="hardnessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHK-9s-F1e"/>
                                                             <action selector="hardnessSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKW-ka-54j"/>
                                                         </connections>
