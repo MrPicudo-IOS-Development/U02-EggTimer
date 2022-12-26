@@ -1,6 +1,12 @@
 import UIKit
 
+// Necesitamos hacer un import para las clases que controlan el audio y el video
+import AVFoundation
+
 class ViewController: UIViewController {
+    
+    // Creamos el objeto para poder acceder a los métodos de la biblioteca de audio y video.
+    var player: AVAudioPlayer!
     
     // Conexión con la etiqueta que nos va a permitir mandar el mensaje cuando el huevo esté listo.
     @IBOutlet weak var messageLabel: UILabel!
@@ -9,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     // Creamos un diccionario para las variables de tiempo que tenemos arriba, con datos de distinto tipo.
-    let eggTimes: [String: Int] = ["Soft": 30, "Medium": 42, "Hard": 72]
+    let eggTimes: [String: Int] = ["Soft": 300, "Medium": 420, "Hard": 720]
     
     // Variables de tiempo que nos servirán para la barra de progreso.
     var totalTime = 0
@@ -30,7 +36,7 @@ class ViewController: UIViewController {
         totalTime = eggTimes[hardness]!
         secondsPassed = 0
         // Sintaxis del temporizador, en donde lo más importante es el selector que debe tener una @objc func para que realice su trabajo.
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     // Función en objective C que será llamada cada segundo por el selector del timer
@@ -46,15 +52,23 @@ class ViewController: UIViewController {
         else {
             if(secondsPassed == totalTime) {
                 print("\(totalTime) seconds.")
+                playSound(name: "alarm_sound")
             }
             messageLabel.text = "Done"
             secondsPassed += 1
-            if (secondsPassed == totalTime + 15) {
+            if (secondsPassed == totalTime + 5) {
                 timer.invalidate() // Detenemos el temporizador.
                 // Reiniciamos el mensaje de la etiqueta de la aplicación:
                 messageLabel.text = "How do you like your eggs?"
             }
         }
+    }
+    
+    // Función necesaria para reproducir sonidos:
+    func playSound(name: String) {
+        let url = Bundle.main.url(forResource: name, withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
     
 }
@@ -63,9 +77,6 @@ class ViewController: UIViewController {
 /* Notas:
     Hay una advertencia que aparece cuando creamos una variable que no utilizamos para nada, y nos sugiere cambiarla por un guión bajo _ para que nosotros, y otras personas, entendamos el código más rápidamente. Esto es especialmente útil en estructuras repetitivas en donde no utilizamos el valor de la variable iterativa.
 */
-
-
-
 
 
 /* Funciones creadas para practicar:
@@ -92,7 +103,6 @@ class ViewController: UIViewController {
  }
  
  
- 
  // Creamos un diccionario para las variables de tiempo que tenemos arriba, con datos de distinto tipo.
  let eggTimes: [String: Int] = ["Soft": 5*60, "Medium": 7*60, "Hard": 12*60]
  
@@ -110,8 +120,6 @@ class ViewController: UIViewController {
              print("Error")
      }
  }
- 
- 
  
  
  */
