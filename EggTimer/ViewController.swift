@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     // Creamos un diccionario para las variables de tiempo que tenemos arriba, con datos de distinto tipo.
     let eggTimes: [String: Int] = ["Soft": 300, "Medium": 420, "Hard": 720]
     
-    // Variables de tiempo que nos servirán para la barra de progreso.
+    // Variables gloables del ViewController que nos servirán para trabajar con el tiempo de la barra de progreso.
     var totalTime = 0
     var secondsPassed = 0
     var type = " "
@@ -30,8 +30,8 @@ class ViewController: UIViewController {
         // Cancelamos cualquier temporizador que esté activo en el momento de llamar a esta función.
         timer.invalidate()
         // Obtenemos el nombre del botón que activó esta función.
-        let hardness = sender.currentTitle! // Soft, Medium, Hard
-        type = hardness
+        let hardness = sender.currentTitle!  // Soft, Medium, Hard
+        type = hardness // Actualizamos el valor de la variable type.
         // Inicializamos el valor de los segundos que va a contar el temporizador, de acuerdo al diccionario que creamos en la línea 6 y reiniciamos el conteo.
         totalTime = eggTimes[hardness]!
         secondsPassed = 0

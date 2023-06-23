@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,9 +32,9 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="XLm-5r-pSP" firstAttribute="leading" secondItem="9S4-l0-41N" secondAttribute="leading" id="6V5-9S-ChY"/>
-                                            <constraint firstAttribute="bottom" secondItem="XLm-5r-pSP" secondAttribute="bottom" id="OKF-nB-MRE"/>
+                                            <constraint firstItem="XLm-5r-pSP" firstAttribute="bottom" secondItem="9S4-l0-41N" secondAttribute="bottom" id="OKF-nB-MRE"/>
                                             <constraint firstItem="XLm-5r-pSP" firstAttribute="top" secondItem="9S4-l0-41N" secondAttribute="top" id="uBu-O3-A6x"/>
-                                            <constraint firstAttribute="trailing" secondItem="XLm-5r-pSP" secondAttribute="trailing" id="yP9-jE-EGL"/>
+                                            <constraint firstItem="XLm-5r-pSP" firstAttribute="trailing" secondItem="9S4-l0-41N" secondAttribute="trailing" id="yP9-jE-EGL"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wAa-qa-eeB" userLabel="Egg Stack View">
@@ -139,7 +139,7 @@
                                             </progressView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="0L0-n5-KBR" secondAttribute="trailing" id="9ZO-qW-SDk"/>
+                                            <constraint firstItem="0L0-n5-KBR" firstAttribute="trailing" secondItem="nJN-th-c5K" secondAttribute="trailing" id="9ZO-qW-SDk"/>
                                             <constraint firstItem="0L0-n5-KBR" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="ACT-ae-CEy"/>
                                             <constraint firstItem="0L0-n5-KBR" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="RXj-n6-haz"/>
                                         </constraints>
@@ -151,9 +151,9 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wI6-ag-afn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8Bl-BK-cpF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wI6-ag-afn" secondAttribute="bottom" id="TCD-uE-n4C"/>
+                            <constraint firstItem="wI6-ag-afn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TCD-uE-n4C"/>
                             <constraint firstItem="wI6-ag-afn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wgn-J5-uGK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wI6-ag-afn" secondAttribute="trailing" id="dky-ZA-Z3J"/>
+                            <constraint firstItem="wI6-ag-afn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dky-ZA-Z3J"/>
                         </constraints>
                     </view>
                     <connections>
